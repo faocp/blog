@@ -3,39 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe's Simple Website</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=IBM+Plex+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
-    <link rel="stylesheet" href="https://unpkg.com/magick.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Classless CSS Boilerplate</title>
+    
+    <!-- Link to Pico.css (you can replace this with another classless CSS framework) -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="https://via.placeholder.com/150" alt="Felipe's Profile Picture" class="profile-picture">
-            <h1>Felipe's Simple Website</h1>
-        </header>
 
-        <section class="bio">
-            <p>This is a work in progress!</p>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Classless CSS</h1>
+        <p>A simple, clean, and minimalist webpage.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section>
+            <h2>About This Page</h2>
+            <p>This page uses a classless CSS framework. No custom class names are required for basic styling!</p>
         </section>
 
-        <section class="contact-info">
-            <a href="mailto:hi@fffelipe.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.instagram.com/fe___at" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.threads.net/@fe___at" target="_blank"><i class="fab fa-threads"></i></a>
-            <a href="https://www.linkedin.com/in/felipeatela" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </section>
+        <section>
+            <h2>Sample Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
 
-        <section class="projects">
-            <!-- Projects will be added here in the future -->
-        </section>
-    </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
 
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Felipe's Simple Website. All rights reserved.</p>
-        <p>Love, from Earth</p>
+        <p>&copy; 2024 Classless CSS Example</p>
     </footer>
+
 </body>
 </html>
