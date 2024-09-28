@@ -1,35 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- For the robots -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe's Simple Website</title>
     <link rel="stylesheet" href="./styles.css">
+    <meta name="description" content="magick.css is magically playful, yet simple styling. all in one file." />
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <title>fffelipe's simple website</title>
+
+    <!-- For the humans -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="book-header.css">
+    <link rel="stylesheet" href="magick.css">
+
+    <!-- This site contains some specific styles for the content, which are not part of magick.css -->
+
+    <style>
+    header {
+      margin-bottom: 2em;
+    }
+
+    .typography-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Adjust the space between columns as needed */
+    }
+
+    .typography-columns > div {
+      flex: 1; /* Allows each child div to grow equally */
+      min-width: 250px; /* Prevents the columns from getting too narrow before stacking */
+    }
+
+    @media (max-width: 600px) {
+      .typography-columns {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      header nav ul li img {
+        filter: invert(1);
+      }
+    }
+    </style>
+
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="https://via.placeholder.com/150" alt="Felipe's Profile Picture" class="profile-picture">
-            <h1>Felipe's Simple Website</h1>
-        </header>
-
-        <section class="bio">
-            <p>Welcome to my personal website! I'm passionate about [your interests/profession]. This is a brief introduction about myself and my work.</p>
-        </section>
-
-        <section class="contact-info">
-            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
-            <a href="https://www.instagram.com/your_username" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.threads.net/@your_username" target="_blank"><i class="fab fa-threads"></i></a>
-            <a href="https://www.linkedin.com/in/your_profile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </section>
-
-        <section class="projects">
-            <!-- Projects will be added here in the future -->
-        </section>
-    </div>
-
+    <body hx-boost="true">
+        <main>
+          <header>
+            <h1>magick.css</h1>
+            <p style="text-align: center; margin-top:-2.3rem; margin-bottom:-0.2rem; margin-left:-15rem; font-size: 1.4rem">by <a href="https://github.com/wintermute-cell/" target="_blank">winterveil</a></p>
+            <nav>
+              <ul>
+                <li><a target="_blank" href="https://github.com/wintermute-cell/magick.css">Github</a></li>
+                <li><a target="_blank" href="https://discord.gg/f8nyyK4ngZ">Discord</a></li>
+                <li><a target="_blank" href="https://www.buymeacoffee.com/winterv">Donate</a></li>
+                <li><a href="translations.html"><img src="translate.svg" style="width:2.3rem; margin:0 0 -0.4rem 0;" alt="translations"></a></li>
+              </ul>
+            </nav>
+          </header>
+    
+          <section id="fundamentals">
+            <blockquote>
+              <p>
+              In the grand compendium of universal knowledge, it is universally
+              acknowledged that the scribbles of a wizard not only transcend the
+              mundane but are, without a shadow of a doubt, the most exhilarating
+              form of notation known to humanoid kind. For who could resist the
+              allure of a well-placed spell in the margins?
+              </p>
+              <footer>Albus Greybeard, <cite>On the Virtues of Mystical Marginalia</cite>, 1132</footer>
+            </blockquote>
+            <h2>Fundamentals</h2>
+            <p>
+              magick.css is a minimalistic, (mostly) classless CSS framework that
+              is designed to be easy to use and easy to understand. It is contained
+              in a single file, and every choice is commented. The goal is to
+              achieve an elegant, but magically playful look, while maximizing
+              readability and the ability to convey information; <em>somewhat akin
+                to the notes of a wizard</em>.
+            </p>
+            <p>
+              The framework retains its beauty and functionality across <strong>all
+                devices</strong> and screen sizes, and works entirely
+              <strong>without JavaScript</strong>. It is inspired by <a
+                href="https://www.latex-project.org/" target="_blank">LaTeX</a>,
+              old school TTRPG rulebooks, CSS frameworks like <a
+                href="https://concrete.style/" target="_blank">concrete.css</a> and
+              <a href="https://edwardtufte.github.io/tufte-css/"
+                target="_blank">Tufte CSS</a> and the "usability as design" ethic of
+              brutalism.
+            </p>
+          </section>
+    
+          <section id="howto">
+            <h2>How to use magick.css</h2>
+            <aside>
+              magick.css works best with <a
+                href="https://necolas.github.io/normalize.css/">normalize.css</a>,
+              using it is strongly recommended!
+            </aside>
+            <p>
+              The easiest way to check out magick.css for your own project is to add it from
+              a CDN. Just add these two lines to your html <code>&lt;head&gt;</code>:
+            </p>
+            <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/normalize.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/magick.css&quot;&gt;</code></pre>
+            <p>
+              You could also just download the magick.css file from this repo, and include
+              it into your html <code>&lt;head&gt;</code> as you normally would:
+            </p>
+            <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/magick.css&quot;&gt;</code></pre>
+            <p>
+              You could also add magick.css to your JS project like this:
+            </p>
+            <pre><code>npm install normalize.css magick.css</code></pre>
+            <p>
+              And import them in your code:
+            </p>
+            <pre><code>import 'normalize.css'
+    import 'magick.css'</code></pre>
+            <p>
+              For anything beyond that: magick.css should work with any HTML5
+              document, as it is 99% classless. There are some cool features that
+              you can use, though; just scroll down to discover them!
+            </p>
+          </section>
+    
+          <section id="layout">
+            <h2>Layout</h2>
+            <p>
+              To have your page structured as a responsive, readable column, wrap
+              all of your content in <code>&lt;main&gt;</code> tags, and then use
+              <code>&lt;section&gt;</code> tags to break up long form content
+              content into sections. This page is a good example of how to do this.
+            <p>
+            <p>
+              (You could of course just ignore this advice and use magick.css for
+              typography and styled components only.)
+            </p>
+            <p>Here is a simple example of the usual structure:</p>
+            <pre><code>&lt;html&gt;
+      &lt;head&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;main&gt;
+          &lt;header&gt; &lt;/header&gt;
+          &lt;section&gt; &lt;/section&gt;
+          &lt;section&gt; &lt;/section&gt;
+          &lt;section&gt; &lt;/section&gt;
+          &lt;footer&gt; &lt;/footer&gt;
+        &lt;/main&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    
+            <p>
+              To add tangential information, magick.css uses the
+              <code>&lt;aside&gt;</code> tag. You will find it used from time to
+              time on this page. Should you want to elaborate on a point, or provide
+              additional context, you can use magick.css's sidenotes.<span class="sidenote-anchor"></span>
+              <span class="sidenote">Sidenotes are automagically numbered!</span>
+              You can find out more about this in the <a href="#extras">Extras</a>
+              section below.
+            </p>
+          </section>
+    
+          <section id="typography">
+            <h2>Typography</h2>
+            <p>
+              Here is a showcase of the typography that magick.css offers:
+            </p>
+            <br>
+            <div class="typography-columns">
+              <div>
+                <h1>Heading 1: A title bold and grand, the story's gate.</h1>
+                <h2>Heading 2: A subtitle beneath, where chapters await.</h2>
+                <h3>Heading 3: With secrets whispered, plots thicken here.</h3>
+                <h4>Heading 4: Fine details shared, the message stands clear.</h4>
+              </div>
+              <div>
+                <p>Paragraphs flow, a river of text,</p>
+                <p><a href="#">Links like portals, where will we go next?</a></p>
+                <p><strong>Strong as stone, our words firmly stand,</strong></p>
+                <p><em>Emphasized whispers, softly they land.</em></p>
+                <p><u>Underlined secrets, subtly hinted,</u></p>
+                <p><small>Small, yet mighty, our words are minted.</small></p>
+                <p><code>Code speaks in logic, crisp and neat,</code></p>
+                <p>Typography's spell, now complete.</p>
+              </div>
+            </div>
+            <br>
+            <p>
+              Headings below <code>&lt;h4&gt;</code> are not styled by magick.css;
+              they are usually not needed for hierarchical structuring, but instead
+              for very specific use cases. So should you need them, you can style
+              them as you see fit.
+            </p>
+            <blockquote>
+              <p>
+                [It is] notable that the Feynman lectures [...] write
+                about all of physics in 1800 pages, using only 2 levels of
+                hierarchical headings: chapters and A-level heads in the text.
+              </p>
+              <footer>
+                <a href="https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">
+                  Edward Tufte, forum post, <cite>‘Book design: advice and examples’ thread</cite>
+                </a>
+              </footer>
+            </blockquote>
+          </section>
+    
+          <section id="structured-content">
+            <h2>Structured Content</h2>
+            <h3>Lists</h3>
+            <p>
+              Lists are kept simple, as to not distract from the content:
+            </p>
+            <ul>
+              <li>This is...</li>
+              <li>... an unordered list.</li>
+            </ul>
+            <br>
+            <ol>
+              <li>This is...</li>
+              <li>... an ordered list.</li>
+            </ol>
+            <br>
+            <dl>
+              <dt>And this weird fellow here...</dt>
+              <dd>... is a description list.</dd>
+            </dl>
+            <br>
+            <h3>Tables</h3>
+            <p>
+              In a similar manner to lists, tables are clear and concise,
+              directing reader focus to the data at hand:
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Potion</th>
+                  <th>Main Ingredient</th>
+                  <th>Catalyst</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Glow Dew</td>
+                  <td>Bioluminescent algae (81mg)</td>
+                  <td style="text-align:center;font-weight:500;">🜼</td>
+                </tr>
+                <tr>
+                  <td>Float Leaf</td>
+                  <td>Dandelion puff (61mg)</td>
+                  <td style="text-align:center;font-weight:500;">🝆</td>
+                </tr>
+                <tr>
+                  <td>Might Brew</td>
+                  <td>Ginseng root (78mg)</td>
+                  <td style="text-align:center;font-weight:500;">🝀</td>
+                </tr>
+                <tr>
+                  <td>Vanish Draft</td>
+                  <td>Mimosa pudica (26mg)</td>
+                  <td style="text-align:center;font-weight:500;">🜞</td>
+                </tr>
+                <tr>
+                  <td>Remembrance Tea</td>
+                  <td>Ginkgo biloba (39mg)</td>
+                  <td style="text-align:center;font-weight:500;">🜇</td>
+                </tr>
+              </tbody>
+            </table>
+    
+          </section>
+    
+          <section id="forms-and-input">
+            <h2>Forms & Input</h2>
+            Interactive elements can be used on their own, or as part of a form.
+            Keep reading to see examples of both.
+            <h3>Buttons</h3>
+            <button>I am a button.</button>
+            <button disabled>I am disabled.</button>
+    
+            <h3>Text Inputs</h3>
+            <p>
+              Free standing text inputs are not opinionated in regards to their size
+              or placement, as their use can vary greatly. Here are some examples:
+            </p>
+            <input style="display:block;" type="text" placeholder="I am a text input.">
+            <input style="display:block;" type="text" placeholder="I am disabled." disabled>
+            <textarea placeholder="I am a textarea."></textarea>
+    
+            <h3>Checkboxes & Radio Buttons</h3>
+            <p>
+              Labels for checkboxes and radio buttons are expected <em>after</em>
+              the input element. This way, magick.css can ensure proper grouped
+              spacing between them, without requiring additional wrappers and classes.
+            </p>
+            <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
+            <label for="checkbox1">I am a checkbox.</label>
+            <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2" disabled>
+            <label for="checkbox2">I am disabled.</label>
+            <br>
+            <input type="radio" id="radio1" name="radio" value="radio1">
+            <label for="radio1">I am a radio button.</label>
+            <input type="radio" id="radio2" name="radio" value="radio2" disabled>
+            <label for="radio2">I am disabled.</label>
+            <p></p>
+            <fieldset>
+              <legend>Fieldset</legend>
+              <input type="radio" id="radio3" name="radio2">
+              <label for="radio3">I am some option.</label>
+              <input type="radio" id="radio4" name="radio2">
+              <label for="radio4">I am another option.</label>
+            </fieldset>
+    
+            <h3>Forms</h3>
+            <p>
+              Forms provide a structured context for interactive elements. In
+              magick.css, forms are styled to stand out, grabbing the user's
+              attention. To stay within the established design, this is achieved by
+              giving forms a handwritten, paper note feel:
+            </p>
+            <form>
+              <label for="nameInput">Name:</label>
+              <input type="text" id="nameInput" name="name" placeholder="Myrddin Ambrosius">
+              <label for="schoolInput">Practiced Schools:</label>
+              <input type="text" id="schoolInput" name="school" placeholder="Illusion, Evocation, ...">
+              <label for="messageTextarea">Message:</label>
+              <textarea id="messageTextarea" name="message"></textarea>
+              <fieldset>
+                <legend>Radio Buttons</legend>
+                <input type="radio" id="radio5" name="radio" value="radio5">
+                <label for="radio5">Radio 1</label>
+                <input type="radio" id="radio6" name="radio" value="radio6">
+                <label for="radio6">Radio 2</label>
+              </fieldset>
+              <fieldset>
+                <legend>Checkboxes</legend>
+                <input type="checkbox" id="checkbox3" name="checkbox3" value="checkbox3">
+                <label for="checkbox3">Checkbox 1</label>
+                <input type="checkbox" id="checkbox4" name="checkbox4" value="checkbox4">
+                <label for="checkbox4">Checkbox 2</label>
+              </fieldset>
+              <button type="submit">Submit</button>
+              <button type="reset" disabled>Reset</button>
+            </form>
+          </section>
     <footer>
         <p>&copy; 2024 Felipe's Simple Website. All rights reserved.</p>
         <p>Created with passion in [Your City/Country]</p>
