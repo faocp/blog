@@ -19,8 +19,8 @@
 
 :root {
     /* Theme colors */
-    --fg: #0e0e0e;
-    --bg: #fefefe;
+    --fg: #f1f1f1;
+    --bg: #1e1e1e;
     --form-bg: #fbfbfb;
     --form-fg: #00004d;
     --form-fg-placeholder: #00004d9a;
