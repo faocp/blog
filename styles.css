@@ -6,12 +6,18 @@
 }
 
 body {
-    font-family: 'Sine', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
+}
+
+.ibm-plex-sans-medium {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .container {
