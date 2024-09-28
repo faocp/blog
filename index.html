@@ -3,46 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Basic Classless CSS Boilerplate</title>
-    
-    <!-- Link to Pico.css (you can replace this with another classless CSS framework) -->
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-    
+    <title>Felipe's Simple Website</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Felipe's Profile Picture" class="profile-picture">
+            <h1>Felipe's Simple Website</h1>
+        </header>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to Classless CSS</h1>
-        <p>A simple, clean, and minimalist webpage.</p>
-    </header>
-
-    <!-- Main Content Section -->
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This page uses a classless CSS framework. No custom class names are required for basic styling!</p>
+        <section class="bio">
+            <p>Welcome to my personal website! I'm passionate about [your interests/profession]. This is a brief introduction about myself and my work.</p>
         </section>
 
-        <section>
-            <h2>Sample Form</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-
-                <button type="submit">Submit</button>
-            </form>
+        <section class="contact-info">
+            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+            <a href="https://www.instagram.com/your_username" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.threads.net/@your_username" target="_blank"><i class="fab fa-threads"></i></a>
+            <a href="https://www.linkedin.com/in/your_profile" target="_blank"><i class="fab fa-linkedin"></i></a>
         </section>
-    </main>
 
-    <!-- Footer Section -->
+        <section class="projects">
+            <!-- Projects will be added here in the future -->
+        </section>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Classless CSS Example</p>
+        <p>&copy; 2024 Felipe's Simple Website. All rights reserved.</p>
+        <p>Created with passion in [Your City/Country]</p>
     </footer>
-
 </body>
 </html>
