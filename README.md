@@ -1,1 +1,1 @@
-# website
+# Uhh, not sure what to say... this is my blog? It's a work in progress.
