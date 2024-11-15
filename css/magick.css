@@ -19,17 +19,17 @@
 
 :root {
     /* Theme colors */
-    --fg: #1e1e1e;
-    --bg: #ffffff;
-    --form-bg: #1e1e1e;
-    --form-fg: #f1f1f1;
+    --fg: #0e0e0e;
+    --bg: #fefefe;
+    --form-bg: #fbfbfb;
+    --form-fg: #00004d;
     --form-fg-placeholder: #00004d9a;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --fg: #1e1e1e;
-        --bg: #f1f1f1;
+        --fg: #fefefe;
+        --bg: #0e0e0e;
         --form-bg: #1a1a1a;
         --form-fg: #fefefe;
         --form-fg-placeholder: #fefefe9a;
@@ -441,11 +441,12 @@ select {
     padding: .4rem 1rem; /* 2 */
     margin-bottom: 1.6rem; /* 2 */
 
-    font-size: 2.6rem; /* 3 */
+    font-size: 2rem; /* 3 */
     color: var(--fg); /* 3 */
     background-color: transparent; /* 3 */
     border-bottom: 1px solid var(--fg); /* 3 */
     border-radius: 0; /* 3 */
+    font-size: 1.8rem; /* 3 */
 
     font-family: "Caveat", cursive; /* 4 */
     font-size: 2.6rem; /* 4 */

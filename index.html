@@ -1,68 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- For the robots -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fffelipe's world wide web</title>
-    <link rel="stylesheet" href="./styles.css">
-    <meta name="description" content="this website is made by fffelipe using magick, it is a work in progress"/>
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="A collection of thoughts and things I like">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/magick.css">
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-
-    <!-- For the humans -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./styles.css">
-
-    <!-- This site contains some specific styles for the content, which are not part of magick.css -->
-
+    <!-- Specific styles that are not part of the stylesheet -->
     <style>
-    header {
-      margin-bottom: 0.1rem;
-    }
-
-    .typography-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px; /* Adjust the space between columns as needed */
-    }
-
-    .typography-columns > div {
-      flex: 1; /* Allows each child div to grow equally */
-      min-width: 250px; /* Prevents the columns from getting too narrow before stacking */
-    }
-
-    @media (max-width: 600px) {
-      .typography-columns {
-        flex-direction: column;
-      }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      header nav ul li img {
-        filter: invert(1);
-      }
-    }
+        header {
+              margin-bottom: 2em;
+            }
+        
+            .typography-columns {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px; /* Adjust the space between columns as needed */
+            }
+        
+            .typography-columns > div {
+              flex: 1; /* Allows each child div to grow equally */
+              min-width: 250px; /* Prevents the columns from getting too narrow before stacking */
+            }
+        
+            @media (max-width: 600px) {
+              .typography-columns {
+                flex-direction: column;
+              }
+            }
+        
+            @media (prefers-color-scheme: dark) {
+              header nav ul li img {
+                filter: invert(1);
+              }
+        }
     </style>
-
+    
+    <title>fffelipe's world wide web</title>
 </head>
 <body>
     <main>
         <header><h1>fffelipe's world wide web</h1></header>
         <section id="main">
-          <h2>What's something cool I've seen recently?</h2>
+          <h2>Something cool I've seen recently</h2>
             <blockquote>
               <p>
-                “Passport Photos” looks at one of the most mundane and unexciting types of photography. 
-                Heavily restricted and regulated, the official passport photo requirements include that the subject needs to face the camera straight on, 
-                needs a clear background without shadow, no glare on glasses 
-                and most importantly; no smile.
+                <a href="https://maxsiedentopf.com/passport-photos/">“Passport Photos”</a> looks at one of the most mundane and unexciting types of photography. 
+                Heavily restricted and regulated, the official passport photo requirements include that 
+                the subject needs to face the camera straight on, [...], and most importantly; no smile.
               </p>
               <footer>
                 <a href="https://maxsiedentopf.com/passport-photos/">
@@ -72,7 +63,7 @@
             </blockquote>
           </section>
         <section id="music">
-            <h2>What's some music I'm into right now?</h2>
+            <h2>Some music I'm into right now</h2>
             <h2>
               <p>
                 <iframe 
