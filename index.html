@@ -5,50 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A collection of thoughts and things I like">
-    
+
+    <!-- Performance: Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://open.spotify.com">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/magick.css">
 
-    <!-- Specific styles that are not part of the stylesheet -->
+    <!--
+        Custom styles specific to this page
+        These styles extend magick.css with page-specific overrides and additions
+        without modifying the base stylesheet
+    -->
     <style>
+        /* ===================================================================================================================== */
+        /*  Layout & Structure  ================================================================================================ */
+        /* ===================================================================================================================== */
+
+        /* Add extra spacing below the header for better visual separation */
         header {
-              margin-bottom: 2em;
-            }
-        
-            .typography-columns {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px; /* Adjust the space between columns as needed */
-            }
-        
-            .typography-columns > div {
-              flex: 1; /* Allows each child div to grow equally */
-              min-width: 250px; /* Prevents the columns from getting too narrow before stacking */
-            }
-        
-            @media (max-width: 600px) {
-              .typography-columns {
-                flex-direction: column;
-              }
-            }
-        
-            @media (prefers-color-scheme: dark) {
-              header nav ul li img {
-                filter: invert(1);
-              }
+            margin-bottom: 2em;
         }
 
-        a:hover {
-          text-decoration: underline;
-          opacity: 0.8;
+        /*
+            Typography columns: Creates a flexible column layout that wraps to multiple rows
+            Used for displaying content in a multi-column format on wider screens
+        */
+        .typography-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between columns */
         }
 
+        .typography-columns > div {
+            flex: 1; /* Each column grows equally to fill available space */
+            min-width: 250px; /* Prevents columns from becoming too narrow - forces stacking instead */
+        }
+
+        /* ===================================================================================================================== */
+        /*  Media Elements  ==================================================================================================== */
+        /* ===================================================================================================================== */
+
+        /* Center the Spotify iframe within the music section */
         #music iframe {
-          display: block;
-          margin: 0 auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            border: 0;
+        }
+
+        /* ===================================================================================================================== */
+        /*  Interactive Elements  ============================================================================================== */
+        /* ===================================================================================================================== */
+
+        /* Add visual feedback when hovering over links */
+        a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        /* ===================================================================================================================== */
+        /*  Responsive Design  ================================================================================================= */
+        /* ===================================================================================================================== */
+
+        /* On mobile screens, stack columns vertically for better readability */
+        @media (max-width: 600px) {
+            .typography-columns {
+                flex-direction: column;
+            }
+        }
+
+        /* Dark mode support: invert images in the header navigation for proper contrast */
+        @media (prefers-color-scheme: dark) {
+            header nav ul li img {
+                filter: invert(1);
+            }
         }
     </style>
     
@@ -82,19 +118,16 @@
           </section>
         <section id="music">
             <h2>Some music I'm into right now</h2>
-            <p>
-              <iframe 
-              style="border-radius:12px" 
-              src="https://open.spotify.com/embed/playlist/07OdhFR4n4NyPBD9LU3npW?utm_source=generator" 
-              width="80%" 
-              height="352" 
-              frameBorder="0" 
-              allowfullscreen="" 
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-              loading="lazy"
-              title="Spotify playlist: Some music I'm into right now">
-              </iframe>
-            </p>
+            <!-- Spotify playlist embed with accessibility title -->
+            <iframe
+            src="https://open.spotify.com/embed/playlist/07OdhFR4n4NyPBD9LU3npW?utm_source=generator"
+            width="80%"
+            height="352"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist: Some music I'm into right now">
+            </iframe>
         </section>
         <footer>
             <p>&copy; est. 2024 – all rights reserved.</p>
