@@ -4,18 +4,17 @@
     <!-- For the robots -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A collection of thoughts and things I like">
+    <meta name="description" content="On the death of cool, the attention economy, and what gets lost when the lag between obscurity and visibility disappears.">
 
     <!-- Performance: Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://open.spotify.com">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/magick.css">
+    <link rel="stylesheet" href="/css/magick.css">
 
     <!--
         Custom styles specific to this page
@@ -32,35 +31,35 @@
             margin-bottom: 2em;
         }
 
-        /*
-            Typography columns: Creates a flexible column layout that wraps to multiple rows
-            Used for displaying content in a multi-column format on wider screens
-        */
-        .typography-columns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Space between columns */
+        /* Navigation spacing within header */
+        header nav {
+            margin-top: 0.5em;
         }
 
-        .typography-columns > div {
-            flex: 1; /* Each column grows equally to fill available space */
-            min-width: 250px; /* Prevents columns from becoming too narrow - forces stacking instead */
+        /* Article content width constraint for optimal reading experience */
+        article {
+            max-width: 680px;
         }
 
         /* ===================================================================================================================== */
-        /*  Media Elements  ==================================================================================================== */
+        /*  Typography  ======================================================================================================= */
         /* ===================================================================================================================== */
 
-        /* Center the Spotify iframe within the music section */
-        #music iframe {
-            display: block;
-            margin: 0 auto;
-            border-radius: 12px;
-            border: 0;
+        /* Enhanced line height for article paragraphs for better readability */
+        article p {
+            line-height: 1.7;
+        }
+
+        /* Essay metadata styling - subtle, secondary information */
+        .essay-meta {
+            color: inherit;
+            opacity: 0.6;
+            font-size: 0.9em;
+            margin-bottom: 2em;
         }
 
         /* ===================================================================================================================== */
-        /*  Interactive Elements  ============================================================================================== */
+        /*  Interactive Elements  ============================================================================================= */
         /* ===================================================================================================================== */
 
         /* Add visual feedback when hovering over links */
@@ -68,27 +67,9 @@
             text-decoration: underline;
             opacity: 0.8;
         }
-
-        /* ===================================================================================================================== */
-        /*  Responsive Design  ================================================================================================= */
-        /* ===================================================================================================================== */
-
-        /* On mobile screens, stack columns vertically for better readability */
-        @media (max-width: 600px) {
-            .typography-columns {
-                flex-direction: column;
-            }
-        }
-
-        /* Dark mode support: invert images in the header navigation for proper contrast */
-        @media (prefers-color-scheme: dark) {
-            header nav ul li img {
-                filter: invert(1);
-            }
-        }
     </style>
-    
-    <title>fffelipe's world wide web</title>
+
+    <title>Cool is dead. Again. — fffelipe</title>
 </head>
 <body>
     <main>
@@ -113,7 +94,7 @@
             </blockquote>
 
             <p>
-                There's nothing cool anymore if the pre-requisite for cool is attention. If the job is getting attention, there's no incentive to like something obscure or niche and dreaming up some slow and difficult, but passionate, way of bringing it to more people. The <em>lag</em> between obscurity and visibility has collapsed, and that lag was doing a lot of the cultural work. The delay was generative — it created subcultures, mystique, scarcity of access.
+                There's nothing cool anymore if the pre-requisite for cool is attention. If the job is getting attention, there's no incentive to finding and liking something niche and dreaming up some slow and difficult, but passionate, way of bringing it to more people. The <em>lag</em> between obscurity and visibility has collapsed, and that lag was doing a lot of the cultural work. The delay was generative — it created subcultures, mystique, scarcity of access.
             </p>
 
             <p>
