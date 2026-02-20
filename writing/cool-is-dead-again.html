@@ -1,48 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- For the robots -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="On the death of cool, the attention economy, and what gets lost when the lag between obscurity and visibility disappears.">
+    <meta name="description" content="A collection of thoughts and things I like">
 
+    <!-- Performance: Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://open.spotify.com">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/magick.css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/magick.css">
+
+    <!--
+        Custom styles specific to this page
+        These styles extend magick.css with page-specific overrides and additions
+        without modifying the base stylesheet
+    -->
     <style>
+        /* ===================================================================================================================== */
+        /*  Layout & Structure  ================================================================================================ */
+        /* ===================================================================================================================== */
+
+        /* Add extra spacing below the header for better visual separation */
         header {
             margin-bottom: 2em;
         }
 
-        header nav {
-            margin-top: 0.5em;
+        /*
+            Typography columns: Creates a flexible column layout that wraps to multiple rows
+            Used for displaying content in a multi-column format on wider screens
+        */
+        .typography-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between columns */
         }
 
-        article {
-            max-width: 680px;
+        .typography-columns > div {
+            flex: 1; /* Each column grows equally to fill available space */
+            min-width: 250px; /* Prevents columns from becoming too narrow - forces stacking instead */
         }
 
-        article p {
-            line-height: 1.7;
+        /* ===================================================================================================================== */
+        /*  Media Elements  ==================================================================================================== */
+        /* ===================================================================================================================== */
+
+        /* Center the Spotify iframe within the music section */
+        #music iframe {
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            border: 0;
         }
 
-        .essay-meta {
-            color: inherit;
-            opacity: 0.6;
-            font-size: 0.9em;
-            margin-bottom: 2em;
-        }
+        /* ===================================================================================================================== */
+        /*  Interactive Elements  ============================================================================================== */
+        /* ===================================================================================================================== */
 
+        /* Add visual feedback when hovering over links */
         a:hover {
             text-decoration: underline;
             opacity: 0.8;
         }
 
-    </style>
+        /* ===================================================================================================================== */
+        /*  Responsive Design  ================================================================================================= */
+        /* ===================================================================================================================== */
 
-    <title>Cool is dead. Again. — fffelipe</title>
+        /* On mobile screens, stack columns vertically for better readability */
+        @media (max-width: 600px) {
+            .typography-columns {
+                flex-direction: column;
+            }
+        }
+
+        /* Dark mode support: invert images in the header navigation for proper contrast */
+        @media (prefers-color-scheme: dark) {
+            header nav ul li img {
+                filter: invert(1);
+            }
+        }
+    </style>
+    
+    <title>fffelipe's world wide web</title>
 </head>
 <body>
     <main>
